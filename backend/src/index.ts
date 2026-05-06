@@ -1,14 +1,7 @@
-import express from 'express';
+import app from './app.js'
 
-const app = express();
-const PORT = process.env.PORT || 5000;
-
-app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.json({ message: 'Task Management API is running!' });
-});
+const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+  console.log(`Server is running on port ${PORT}`)
+})
